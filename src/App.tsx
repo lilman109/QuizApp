@@ -60,7 +60,15 @@ const App = () => {
 		}
 	};
 
-	const nextQuestion = () => {};
+	const nextQuestion = () => {
+		const nextQuestion = number + 1;
+
+		if (nextQuestion === TOTAL_QUESTIONS) {
+			setGameOver(true);
+		} else {
+			setNumber((prev) => prev + 1);
+		}
+	};
 
 	return (
 		<div className='App'>
